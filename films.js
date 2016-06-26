@@ -4,7 +4,7 @@
 	function drawMarkersMap() {
 		
       var data = $.ajax({
-          url: "machinesData.json", //Change this for the url where is allocated the json or php file
+          url: "repartitionFilms.json", //Change this for the url where is allocated the json or php file
           dataType:"json",
           async: false
           }).responseText;

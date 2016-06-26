@@ -1,21 +1,23 @@
 	google.charts.load('current', {'packages': ['geochart']});
-    google.charts.setOnLoadCallback(drawMarkersMap);
       
-	function drawMarkersMap() {
+	function drawPaysMap() {	
+		var options = {};
+		var dimension = "nbreFilms";
 		
-      var data = $.ajax({
-          url: "repartitionFilms.json", //Change this for the url where is allocated the json or php file
-          dataType:"json",
-          async: false
-          }).responseText;
-
-      jsonData = JSON.parse(data);
-	  
-      var options = {
-		title : 'Repartition des films par nationalité dans une filmotheque personnelle',
-      };
-
-      var geochart = new google.visualization.GeoChart(document.getElementById('geochart'));
-      chart.draw(data, options);  
-	
+		$.ajax({
+			url: "repartitionFilms.json",
+			dataType: "JSON"
+			}).done(function(data) {
+                var array = [["Pays",dimension]];
+                $.each(data.pays, function() {
+                    var paysItem = [this.pays, this[dimension]];
+                    array.push(paysItem);
+                });
+			var paysData = google.visualization.arrayToDataTable(array);
+			var chart = new google.visualization.GeoChart(document.getElementById('geochart'));
+			chart.draw(paysData, options);
+			$("h3").append(" Sorted by  "+dimension);
+        });
 	} 
+	
+	google.charts.setOnLoadCallback(drawPaysMap);

@@ -1,0 +1,51 @@
+[
+  {
+    "IoT_public_key": "571c30907498424c946bfecc",
+    "name": "my_house",
+    "description": "Netduino Plus connected to sensors around the house",
+    "created_at": "2016-04-24T02:33:52.036Z",
+    "Number_variables": "3",
+    "Lenght_variable": "20",
+    "Lenght_value": "20",
+    "Limit_15min": "100000",
+    "timezone": "America/Caracas",
+    "api_version": "1",
+    "Api Version": 1
+  },
+  {
+    "_id": "5740f6a342dfe43c27654764",
+    "data1": 1,
+    "data2": 10,
+    "created": "2016-05-21T19:30:35"
+  },
+  {
+    "_id": "5740f6db1a8ae570358dca76",
+    "data1": 2,
+    "data2": 20,
+    "created": "2016-05-21T19:31:31"
+  },
+  {
+    "_id": "5740f6e51a8ae570358dca77",
+    "data1": 3,
+    "data2": 30,
+    "created": "2016-05-21T19:31:41"
+  },
+  {
+    "_id": "5740f7511a8ae570358dca78",
+    "data1": 4,
+    "data2": 40,
+    "created": "2016-05-21T19:33:29"
+  },
+  {
+    "_id": "5740f75a1a8ae570358dca79",
+    "data1": 6,
+    "data2": 60,
+    "created": "2016-05-21T19:33:38"
+  },
+  {
+    "_id": "5740f76b1a8ae570358dca7a",
+    "data1": 9,
+    "data2": 90,
+    "created": "2016-05-21T19:33:55"
+  }
+]

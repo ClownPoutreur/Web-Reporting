@@ -10,6 +10,7 @@
       <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
       <li><a data-toggle="tab" href="#menu1">Name of Data</a></li>
       <li><a data-toggle="tab" href="#menu2">Leaflet</a></li>
+	  <li><a data-toggle="tab" href="#menu3">Films</a></li>
     </ul>
     <div class="tab-content">
       <div id="home" class="tab-pane fade in active">
@@ -35,13 +36,20 @@
         <h2>Liste des sites des hotspots Paris WiFi</h2>
         <div id="mapid" style="height: 400px; width: 80%;"></div>
       </div>
+	  <div id="menu3" class="tab-pane fade">
+        <h2>Répartition des films dans une filmothèque personnelle</h2>
+        <div id="geochart_div"></div>
+        <div id="geochart" style="width: 900px; height: 500px;"></div>
+      </div>
     </div>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type='text/javascript' src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script src="chart.js"></script>
     <script src="chart2.js"></script>
     <script src="leaflet.js"></script>
+	<script src="films.js"></script>
   </body>
 </html>

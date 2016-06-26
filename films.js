@@ -4,20 +4,20 @@
 		var options = {};
 		var dimension = "nbreFilms";
 		
-		$.ajax({
-			url: "repartitionFilms.json",
-			dataType: "JSON"
-			}).done(function(data) {
-                var array = [["Pays",dimension]];
-                $.each(data.pays, function() {
-                    var paysItem = [this.pays, this[dimension]];
-                    array.push(paysItem);
-                });
-			var paysData = google.visualization.arrayToDataTable(array);
-			var chart = new google.visualization.GeoChart(document.getElementById('geochart'));
-			chart.draw(paysData, options);
-			$("h3").append(" Sorted by  "+dimension);
-        });
+		$.getJSON("repartitionFilms.json",function(a){
+		var b = new google.visualization.DataTable();
+		b.addColumn("string","pays");
+		b.addColumn("number","nbreFilms");
+		a.valeurs.forEach(function(c,d){
+			b.addRows([[a.pays[d],c]])
+		});
+		
+		var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('geochart'));
+
+        chart.draw(b, options);
+
 	} 
 	
 	google.charts.setOnLoadCallback(drawPaysMap);
